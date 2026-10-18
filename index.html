@@ -230,6 +230,26 @@ details p{padding:0 0 20px;color:var(--muted);max-width:60em}
 .cta-band .btn.sec:hover{background:var(--band-ink);color:var(--band)}
 footer{padding-block:28px 40px;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 30px}
 
+/* live demo */
+.demo{display:grid;grid-template-columns:7fr 5fr;gap:48px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:48px;box-shadow:var(--shadow)}
+.demo h2{font-size:clamp(28px,3.8vw,46px);font-weight:800;margin-block:14px 16px}
+.demo p{color:var(--muted)}
+.demo ul{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}
+.demo li{position:relative;padding-left:26px;font-size:15.5px}
+.demo li::before{content:"";position:absolute;left:0;top:.55em;width:14px;height:2px;background:var(--accent)}
+.demo .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.demo>*{min-width:0}
+.qrbox{display:grid;justify-items:center;gap:14px;text-align:center}
+.qrbox .qr{background:#fff;border-radius:18px;padding:18px;width:min(260px,100%);box-shadow:var(--shadow);border:1px solid var(--line)}
+.qrbox .qr svg{display:block;width:100%;height:auto}
+.qrbox .scan{font:700 12px var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.urlrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;max-width:100%}
+.urlrow code{font:500 13px var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;overflow-wrap:anywhere;user-select:all}
+.urlrow button{all:unset;cursor:pointer;font:700 13px var(--f-body);padding:8px 14px;border-radius:999px;border:1.5px solid var(--ink)}
+.urlrow button:hover{background:var(--ink);color:var(--bg)}
+.urlrow button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+@media(max-width:900px){.demo{grid-template-columns:1fr;padding:28px 22px;gap:32px}.demo ul{grid-template-columns:1fr}}
+
 /* lightbox */
 .lb{position:fixed;inset:0;z-index:100;background:rgba(5,8,16,.9);display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:max(24px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 24px max(16px,env(safe-area-inset-left,0px))}
 .lb img{width:min(1400px,100%);height:auto;border-radius:10px;cursor:zoom-out}
@@ -252,7 +272,7 @@ footer{padding-block:28px 40px;font-size:13px;color:var(--muted);display:flex;fl
       SentraGo
     </a>
     <nav aria-label="Sections">
-      <a href="#how">How it works</a><a href="#features">Features</a><a href="#finance">Finance</a><a href="#menu">Menu</a><a href="#specs">Specs</a><a href="#faq">FAQ</a>
+      <a href="#how">How it works</a><a href="#demo">Live demo</a><a href="#features">Features</a><a href="#finance">Finance</a><a href="#menu">Menu</a><a href="#specs">Specs</a><a href="#faq">FAQ</a>
     </nav>
     <a class="btn pri" href="https://sentradesk.com/contact.html" target="_blank" rel="noopener">Book a demo</a>
   </div>
@@ -265,8 +285,8 @@ footer{padding-block:28px 40px;font-size:13px;color:var(--muted);display:flex;fl
     <h1>Sell WiFi like it's already <em>yours to sell.</em></h1>
     <p class="lede">Generate, sell and activate hotspot vouchers straight onto your MikroTik routers. No RADIUS server, no manual entry. Every site in one panel, with finance and profit &amp; loss built in.</p>
     <div class="cta">
-      <a class="btn pri" href="https://sentradesk.com/contact.html" target="_blank" rel="noopener">Book a demo</a>
-      <a class="btn sec" href="#features">See the screens</a>
+      <a class="btn pri" href="https://hotspot.ajerx.com/wifihotspot" target="_blank" rel="noopener">Try the live demo</a>
+      <a class="btn sec" href="https://sentradesk.com/contact.html" target="_blank" rel="noopener">Book a demo</a>
     </div>
     <div class="micro"><span>Direct RouterOS API</span><span>Multi-site</span><span>Guest WiFi + ads</span></div>
   </div>
@@ -316,6 +336,34 @@ footer{padding-block:28px 40px;font-size:13px;color:var(--muted);display:flex;fl
     <div class="st rv"><h3>Configure packages</h3><p>Set price, duration, data limit and speed for each plan you want to sell, matched to a router profile.</p></div>
     <div class="st rv"><h3>Print and sell</h3><p>Generate the first batch, print it as cards, and sell at the counter. Staff learn sell, activate and void in a day.</p></div>
     <div class="st rv"><h3>Add the next site</h3><p>Each new router is another connection in the same panel, reporting into the same finance and inventory view.</p></div>
+  </div>
+</section>
+
+
+<section id="demo">
+  <div class="demo rv">
+    <div>
+      <div class="eyebrow">Try it yourself</div>
+      <h2>Play the customer. Watch the owner's dashboard.</h2>
+      <p>The live demo is a simulated restaurant hotspot. You use a virtual phone as the guest, and the owner's dashboard updates as you go. No real router or SMS is involved, so nothing is saved to a real site.</p>
+      <ul>
+        <li>Scan the QR and join the demo WiFi</li>
+        <li>Tap Free WiFi and sign in with a phone number</li>
+        <li>Log in with a voucher serial and PIN</li>
+        <li>See session time and data counters</li>
+        <li>Try video, image and banner ads</li>
+        <li>Jump the clock forward to test repeat rules</li>
+      </ul>
+      <div class="row">
+        <a class="btn pri" href="https://hotspot.ajerx.com/wifihotspot" target="_blank" rel="noopener">Open the live demo</a>
+        <a class="btn sec" href="https://sentradesk.com/contact.html" target="_blank" rel="noopener">Book a demo</a>
+      </div>
+    </div>
+    <div class="qrbox">
+      <div class="qr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" shape-rendering="crispEdges" role="img" aria-label="QR code for the live demo link"><path class="qrline" stroke="#0b1226" d="M0 0.5h7m1 0h6m3 0h2m3 0h7m-29 1h1m5 0h1m1 0h4m1 0h1m2 0h5m1 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m3 0h2m6 0h1m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h3m2 0h4m1 0h2m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h1m1 0h1m1 0h3m1 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m3 0h1m5 0h1m5 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-20 1h1m1 0h4m4 0h2m-21 1h1m2 0h6m1 0h4m1 0h1m1 0h1m2 0h2m2 0h1m1 0h3m-24 1h1m2 0h1m2 0h1m1 0h3m1 0h3m1 0h1m1 0h2m1 0h2m-27 1h1m2 0h3m6 0h1m1 0h3m2 0h2m4 0h1m-26 1h2m4 0h7m1 0h3m1 0h1m2 0h4m2 0h1m-28 1h1m1 0h1m2 0h3m1 0h1m1 0h2m1 0h1m2 0h2m2 0h1m5 0h1m-29 1h2m1 0h1m1 0h1m1 0h1m4 0h7m3 0h7m-27 1h2m2 0h1m1 0h3m1 0h2m1 0h3m1 0h2m3 0h1m1 0h1m1 0h1m-28 1h2m2 0h1m1 0h2m1 0h2m9 0h1m1 0h2m1 0h1m1 0h1m-25 1h1m1 0h4m2 0h1m1 0h3m3 0h1m4 0h1m-26 1h2m1 0h1m3 0h2m1 0h2m1 0h3m1 0h1m1 0h3m2 0h1m1 0h2m-28 1h3m1 0h1m1 0h3m2 0h1m3 0h1m3 0h2m1 0h1m2 0h1m2 0h1m-29 1h2m2 0h1m6 0h1m2 0h3m3 0h1m2 0h1m1 0h2m-27 1h3m3 0h1m1 0h2m1 0h4m1 0h2m2 0h8m-20 1h3m1 0h1m1 0h2m1 0h2m1 0h1m3 0h2m-26 1h7m1 0h3m3 0h2m1 0h4m1 0h1m1 0h2m-26 1h1m5 0h1m1 0h1m1 0h2m2 0h1m1 0h2m1 0h2m3 0h1m2 0h2m-29 1h1m1 0h3m1 0h1m1 0h1m1 0h5m1 0h1m2 0h7m2 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2m1 0h2m1 0h1m1 0h1m7 0h1m-29 1h1m1 0h3m1 0h1m3 0h2m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2m1 0h3m-29 1h1m5 0h1m2 0h1m1 0h3m2 0h1m1 0h1m2 0h1m2 0h3m1 0h1m-29 1h7m1 0h3m1 0h3m4 0h5"/></svg></div>
+      <div class="scan">Scan with your phone</div>
+      <div class="urlrow"><code id="demoUrl">https://hotspot.ajerx.com/wifihotspot</code><button type="button" id="copyDemo">Copy link</button></div>
+    </div>
   </div>
 </section>
 
@@ -597,7 +645,8 @@ footer{padding-block:28px 40px;font-size:13px;color:var(--muted);display:flex;fl
     <h2>Know exactly what your hotspot made this month.</h2>
     <p>Pick your first site. We connect the router, configure your packages and print the first batch alongside your team.</p>
     <div class="row">
-      <a class="btn pri" href="https://sentradesk.com/contact.html" target="_blank" rel="noopener">Book a demo</a>
+      <a class="btn pri" href="https://hotspot.ajerx.com/wifihotspot" target="_blank" rel="noopener">Try the live demo</a>
+      <a class="btn sec" href="https://sentradesk.com/contact.html" target="_blank" rel="noopener">Book a demo</a>
       <a class="btn sec" href="https://sentradesk.com/sentra-go.html" target="_blank" rel="noopener">Full product page</a>
     </div>
   </div>
@@ -663,6 +712,14 @@ footer{padding-block:28px 40px;font-size:13px;color:var(--muted);display:flex;fl
     });
   });
   pick(0);
+
+  /* copy demo link */
+  var cb=document.getElementById('copyDemo'), cu=document.getElementById('demoUrl');
+  if(cb&&cu){cb.addEventListener('click',function(){
+    function done(){cb.textContent='Copied';setTimeout(function(){cb.textContent='Copy link'},1600)}
+    function fallback(){try{var r=document.createRange();r.selectNodeContents(cu);var sel=getSelection();sel.removeAllRanges();sel.addRange(r)}catch(e){}}
+    try{navigator.clipboard.writeText(cu.textContent).then(done,fallback)}catch(e){fallback()}
+  })}
 
   /* lightbox */
   document.addEventListener('click',function(e){
